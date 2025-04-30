@@ -13,6 +13,17 @@ public class PointApp {
 		Point p02 = new Point(10,20);
 		p02.draw();
 		
+		
+		System.out.println("*****************************");
+		p01.draw(); //그리다
+		
+		
+		
+		p01.draw(true); //그리다
+		p01.draw(false); //지우다
+		
+		
+		
 	}
 
 }

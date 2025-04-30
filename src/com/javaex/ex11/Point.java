@@ -9,14 +9,14 @@ public class Point {
 	//생성자
 	public Point() {
 		//메모리
-		System.out.println("Point()");
+		//System.out.println("Point()");
 	}
 	
 	public Point(int x, int y) {
 		//메모리
 		this.x = x;
 		this.y = y;
-		System.out.println("Point(2)");
+		//System.out.println("Point(2)");
 	}
 	
 	//메서드 gs
@@ -41,4 +41,23 @@ public class Point {
 		System.out.println("점 x=" + x + ", y=" + y + " 을 그렸습니다.");
 		System.out.println("--------------------------");
 	}
+	
+	public void draw(boolean action) {
+		if(action == true) {
+			System.out.println("점 x=" + x + ", y=" + y + " 을 그렸습니다.");
+			System.out.println("--------------------------");
+		
+		}else {
+			System.out.println("점 x=" + x + ", y=" + y + " 을 지웠습니다.");
+			System.out.println("--------------------------");
+		}
+	}
+	
+	
+	public void remove() {
+		System.out.println("점 x=" + x + ", y=" + y + " 을 지웠습니다.");
+		System.out.println("--------------------------");
+	}
+	
+
 }
