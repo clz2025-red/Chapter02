@@ -1,47 +1,54 @@
-package com.javaex.ex08;
+package com.javaex.ex14;
 
 public class Goods {
 
 	// 필드
 	private String name;
 	private int price;
-
-	// 생성자
-	public Goods() {// 기본생성자-자동으로 생김
-					// *다른생성자가 있으면 자동으로생기지 않늗다
-		// 메모리에 올리는일(엄청난걸 해주는다)
-	}
+	private static int count;
 	
+	
+	// 생성자
+	public Goods() {
+		// 메모리
+		count = count+1;   //count++   ++count
+	}
+
 	public Goods(String name, int price) {
-		// 메모리에 올리는일(엄청난걸 해주는다)
+		// 메모리
 		this.name = name;
 		this.price = price;
-	}
-	
-	// 메소드
-	// name 등록
-	public void setName(String n) {
-		name = n;
+		count = count+1;   //count++   ++count
 	}
 
-	// name 읽어오기
+	// 메소드-gs
+	// 이름저장
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	// 이름읽기
 	public String getName() {
-
 		return name;
 	}
 
-	// price 등록
-	public void setPrice(int p) {
-		price = p;
+	// 가격 저장
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
-
-	
-	// price 읽어오기
+	// 가격 읽기
 	public int getPrice() {
 		return price;
 	}
+	
+	// 카운터 읽기
+	public int getCount() {
+		return count;
+	}
+	
 
+	// 메소드-일반
 	// 정보출력
 	public void showInfo() {
 		System.out.println("==========================");

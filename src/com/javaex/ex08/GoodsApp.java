@@ -10,13 +10,9 @@ public class GoodsApp {
 		
 		camera.showInfo();
 		
-		
 		Goods cup = new Goods("머그컵", 2000);
 		cup.showInfo();
 		
-		
-		
-
 	}
 
 }
