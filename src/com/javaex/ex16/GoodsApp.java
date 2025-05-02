@@ -2,6 +2,13 @@ package com.javaex.ex16;
 
 public class GoodsApp {
 
+	//필드
+
+	//생성자
+	
+	//메소드gs
+	
+	//메소드일반
 	public static void main(String[] args) {
 		
 		//int[] intArr = new int[3];
@@ -32,6 +39,15 @@ public class GoodsApp {
 		for(int i=0; i<goodsArr.length; i++) {
 			goodsArr[i].showInfo();
 		}
+		
+		//////////////////////////////
+		Goods candy  = new Goods();
+		candy.setName("사탕");
+		
+		
+		Goods ca  = new Goods();
+		candy.setName("니콘");
+		
 		
 		
 	}

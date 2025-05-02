@@ -3,7 +3,7 @@ package com.javaex.ex12;
 public class Math {
 
 	//필드
-	
+
 	//생성자
 	//기본생성자 자동으로 생김
 	

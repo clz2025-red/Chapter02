@@ -22,6 +22,7 @@ public class Goods {
 	}
 
 	public void setName(String name) {
+		
 		this.name = name;
 	}
 
@@ -35,6 +36,10 @@ public class Goods {
 
 
 	//메소드 일반
+	public void main2() {
+		price = 500;
+	}
+	
 	@Override
 	public String toString() {
 		return "Goods [name=" + name + ", price=" + price + "]";
