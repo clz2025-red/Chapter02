@@ -3,14 +3,14 @@ package com.javaex.ex19;
 public class Person {
 	//필드
 	private String name;
-	private int age;
+	protected int age;
 	
 	//생성자
-	public Person() {
+	public Person() {//메모리
 		System.out.println("Person()");
 	}
 
-	public Person(String name, int age) {
+	public Person(String name, int age) {//메모리
 		this.name = name;
 		this.age = age;
 		System.out.println("Person(2)");
