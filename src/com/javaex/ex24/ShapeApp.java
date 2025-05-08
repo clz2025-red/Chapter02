@@ -3,42 +3,64 @@ package com.javaex.ex24;
 public class ShapeApp {
 
 	public static void main(String[] args) {
+		//Shape[] sArray = new Shape[4];
 		
-		//나는 1개로 관리하고 싶다
-		Shape[] sArray = new Shape[4];
+		Drawable[] dArray = new Drawable[4];
 		
+		//포인트를 메모리에 올리고 Drawable이야 라고 속인다
+		Drawable dp = new Point(5, 100);
 		
-		//섞어쓰기
-		Shape t = new Triangle("빨강", "빨강", 5, 3);
-		Shape r = new Rectangle("노랑", "노랑", 10, 10);
-		Shape c = new Circle("파랑", "파랑", 5);
+		/*
+		dp.draw();
+		((Point)dp).getX();
+		*/
 		
+		//삼각형을 메모리에 올리고 Drawable이야 라고 속인다
+		Drawable dt = new Triangle("빨강", "빨강", 10, 20);
 		
-		sArray[0] = t;
-		sArray[1] = r;
-		sArray[2] = c;
+		/*
+		dt.draw();
+		((Triangle)dt).getHeight();
+		((Shape)dt).getFillColor();
+		*/
 		
+		Drawable dr = new Rectangle("초록", "초록", 20, 200);
+		Drawable dc = new Circle("파랑", "파랑", 5);
 		
-		//포인트 추가  클래스설계부터 억지로 만들었다
-		Shape p = new Point(5, 5);
-		sArray[3] = p;
+		//배열에 추가
+		dArray[0] = dt;  //삼각형
+		dArray[1] = dr;  //사각형
+		dArray[2] = dc;  //원
+		dArray[3] = dp;  //포인트
 		
-		//그리기
-		for(int i=0; i<sArray.length; i++) {
-			//sArray[i].draw();
+		//한번에 그리기
+		for(int i=0; i<dArray.length; i++) {
+			dArray[i].draw();
 		}
 		
-		//넓이 출력
-		for(int i=0; i<sArray.length; i++) {
-			sArray[i].area();   
-			//포인트는 면적을 구할수 없는데 임의로 넣은 값이 출력된다.
+		//dp가 Drawable 출신이냐?
+		System.out.println(dp instanceof Drawable);
+		
+		//dp가 Point 출신이냐?
+		System.out.println(dp instanceof Point);
+		
+		//dp가 Shape 출신이냐?
+		System.out.println(dp instanceof Shape);
+		
+		//dt Shape 출신이냐?
+		System.out.println(dt instanceof Shape);
+		
+		
+		//한번에 면적구하기--> Point는 Shape으로 캐스팅 할 수 없다
+		for(int i=0; i<dArray.length; i++) {
+			if(dArray[i] instanceof Shape) { //방의 주소가 Shape출신이냐? -->면적구할수 있음
+				((Shape)dArray[i]).area();	
+			}
+			
 		}
 		
-		//sArray[3] 은 포인트 아래처럼쓰면 색을 넣을 수있다
-		sArray[3].setFillColor("빨강");
 		
 	}
-	
 	
 	
 

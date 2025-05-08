@@ -1,6 +1,6 @@
 package com.javaex.ex24;
 
-public class Circle extends Shape{
+public class Circle extends Shape implements Drawable{
 
 	//필드
 	private int radius;
@@ -30,6 +30,7 @@ public class Circle extends Shape{
 				+ "]";
 	}
 	
+	//Drawable 인터페이스 구현
 	public void draw() {
 		System.out.println("===원을 그렸습니다.================================");
 		System.out.println("면색:" + super.getFillColor() );
@@ -38,7 +39,7 @@ public class Circle extends Shape{
 		System.out.println("===================================================");
 	}
 	
-	//넓이구하는 함수
+	//Shape의 area()메소드 오버라이드:  넓이구하는 함수
 	public void area() {
 		System.out.println("원의 넓이--------------------");
 		System.out.println(3.14*radius*radius);

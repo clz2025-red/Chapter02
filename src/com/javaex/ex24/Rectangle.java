@@ -1,6 +1,6 @@
 package com.javaex.ex24;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Drawable{
 
 	//필드
 	private int width;
@@ -48,6 +48,7 @@ public class Rectangle extends Shape{
 	}
 	
 
+	//Drawable 인터페이스 구현
 	public void draw() {
 		System.out.println("===사각형을 그렸습니다.================================");
 		System.out.println("면색:" + super.getFillColor() );
@@ -57,7 +58,7 @@ public class Rectangle extends Shape{
 		System.out.println("===================================================");
 	}
 	
-	//넓이구하는 함수
+	//Shape의 area()메소드 오버라이드:  넓이구하는 함수
 	public void area() {
 		System.out.println("사각형의 넓이--------------------");
 		System.out.println(width*height);
