@@ -1,6 +1,6 @@
 package com.javaex.ex24;
 
-public class Triangle extends Shape{ 
+public class Triangle extends Shape implements Drawable{ 
 
 	//필드
 	private int width;
@@ -51,6 +51,7 @@ public class Triangle extends Shape{
 	}
 
 
+	//Drawable 인터페이스 구현
 	public void draw() {
 		System.out.println("===삼각형을 그렸습니다.================================");
 		System.out.println("면색:" + super.getFillColor() );
@@ -59,7 +60,7 @@ public class Triangle extends Shape{
 		System.out.println("세로:" + this.height);
 		System.out.println("===================================================");
 	}
-	
+
 	
 	
 	//넓이구하는 함수
