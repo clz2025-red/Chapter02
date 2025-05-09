@@ -1,6 +1,6 @@
 package com.javaex.ex22;
 
-public abstract class Shape {
+public abstract class Shape extends Object{
 	
 	//필드
 	private String fillColor;
